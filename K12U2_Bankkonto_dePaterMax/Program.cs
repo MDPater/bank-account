@@ -11,13 +11,13 @@ namespace K12U2_Bankkonto_dePaterMax
         static void Main(string[] args)
         {
             IO konto1 = new Konto(5000);
-            Console.WriteLine("Kontostand: "+konto1.kontostand);
+            Console.WriteLine("Bank balance: "+konto1.kontostand);
             int iEingabe;
             bool stop = true;
 
             do
             {
-                Console.WriteLine("Einzahlen (1), Auszahlen (2), Beenden (0): ");
+                Console.WriteLine("deposit (1), pay out (2), close (0): ");
                 iEingabe = Convert.ToInt32(Console.ReadLine());
 
                 switch (iEingabe)
@@ -35,13 +35,13 @@ namespace K12U2_Bankkonto_dePaterMax
                         Console.WriteLine("Eingabe ist falsch");
                         break;
                 }
-                Console.WriteLine("Kontostand: " + konto1.kontostand);
+                Console.WriteLine("Bank balance: " + konto1.kontostand);
             }
             while (stop == true);
         }
         static double Eingabe()
         {
-            Console.WriteLine("Betrag: ");
+            Console.WriteLine("amount: ");
             return Convert.ToDouble(Console.ReadLine());
         }
     }
